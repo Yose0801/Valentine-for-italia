@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine for Ita</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        #yes-button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #no-button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Can I be your Valentine?</h1>
+    <button id="yes-button" onclick="yesClicked()">YES</button>
+    <button id="no-button" onmouseover="moveNoButton()">NO</button>
+
+    <script>
+        function yesClicked() {
+            document.body.innerHTML = "<h1>Te veo el 14 preciosa ❤️</h1>";
+        }
+
+        function moveNoButton() {
+            let noButton = document.getElementById("no-button");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
